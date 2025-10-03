@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UWISA</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Contact UWISA</h1>
+                <p>Get in touch with us for membership inquiries, legal support, or any questions about our services. We're here to help and support you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Reach Us</h2>
+                <p>Multiple ways to get in touch with our team for support and assistance.</p>
+            </div>
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Head Office Address</h3>
+                    <p>1 174 Jacob Street<br>Protea North, Johannesburg<br>Gauteng, South Africa</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p>[To be added]</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Address</h3>
+                    <p>[To be added]</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Types -->
+    <section class="inquiry-types-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Can We Help You With?</h2>
+                <p>Our team is ready to assist you with various types of inquiries and support needs.</p>
+            </div>
+            <div class="inquiry-types-grid">
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Membership Inquiries</h3>
+                    <p>Questions about joining UWISA, membership benefits, or application process</p>
+                </div>
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Support</h3>
+                    <p>Workplace disputes, unfair dismissals, or CCMA cases requiring assistance</p>
+                </div>
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>General Information</h3>
+                    <p>General questions about UWISA, our services, or union activities</p>
+                </div>
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Feedback & Suggestions</h3>
+                    <p>Share your feedback, suggestions, or ideas to help us improve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+               <form id="contactForm" method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary large">Send Message</button>
+                        <p class="form-note">We typically respond within 24-48 hours during business days.</p>
+                    </div>
+               </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact-section">
+        <div class="container">
+            <div class="emergency-content">
+                <h2>Emergency Legal Support</h2>
+                <p>If you're facing an urgent workplace dispute or unfair treatment that requires immediate legal attention, please use our emergency contact information below.</p>
+                <div class="emergency-card">
+                    <div class="emergency-info">
+                        <h3>Emergency Legal Hotline</h3>
+                        <p>Available 24/7 for urgent workplace disputes and legal emergencies</p>
+                        <div class="emergency-number">
+                            <strong>[Emergency Number To Be Added]</strong>
+                        </div>
+                        <p class="emergency-note">This service is available exclusively for UWISA members facing urgent legal situations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+{% include 'footer.html' %}
+
+    <script src="{% static 'script/app.js'%}"></script>
+</body>
+</html>

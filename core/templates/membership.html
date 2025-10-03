@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - UWISA</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+{% include 'navbar.html' %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Join UWISA Today</h1>
+                <p>Become part of a united movement fighting for worker rights in the security and retail industries.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="requirements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Membership Requirements</h2>
+                <p>To join UWISA, you must meet the following requirements:</p>
+            </div>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Employment Requirement</h3>
+                    <p>Must be currently employed in the security or retail sectors</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Citizenship Requirement</h3>
+                    <p>Must be a South African citizen</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Membership Fee</h3>
+                    <p>Monthly membership fee of R70</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Application Process</h3>
+                    <p>Complete membership application form</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefits of Membership</h2>
+                <p>When you join UWISA, you gain access to comprehensive support and representation.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Support & Representation</h3>
+                    <p>Full assistance with workplace disputes, unfair dismissals, and CCMA cases for both security and retail workers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collective Bargaining Power</h3>
+                    <p>A united voice for negotiating better pay, fair contracts, and safer workplaces.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Job Security Protection</h3>
+                    <p>Campaigns against casualisation and unfair retrenchments.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Training & Skills Development</h3>
+                    <p>Workshops, certifications, and capacity-building programs for both sectors.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Industry Updates</h3>
+                    <p>Regular news, labour law changes, and sector developments.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Networking & Solidarity</h3>
+                    <p>Connect with workers from different companies and build support systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="membership-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Membership Application</h2>
+                <p>Fill out the form below to apply for UWISA membership. All fields marked with * are required.</p>
+            </div>
+
+            <div class="membership-form">
+                <h3>Apply for UWISA Membership</h3>
+                <form method="post" action="{% url 'membership' %}" id="membershipForm">
+                    {% csrf_token %}
+
+                    <!-- Show non-field errors (e.g. validation) -->
+                    {{ form.non_field_errors }}
+
+                    <div class="form-section">
+                        <h4>Personal Information</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                {{ form.full_name.label_tag }}
+                                {{ form.full_name }}
+                                {{ form.full_name.errors }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.email.label_tag }}
+                                {{ form.email }}
+                                {{ form.email.errors }}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                {{ form.phone.label_tag }}
+                                {{ form.phone }}
+                                {{ form.phone.errors }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.address.label_tag }}
+                                {{ form.address }}
+                                {{ form.address.errors }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Employment Information</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                {{ form.sector.label_tag }}
+                                {{ form.sector }}
+                                {{ form.sector.errors }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.employer.label_tag }}
+                                {{ form.employer }}
+                                {{ form.employer.errors }}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                {{ form.job_title.label_tag }}
+                                {{ form.job_title }}
+                                {{ form.job_title.errors }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Confirmations</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                {{ form.citizenship }} I confirm that I am a South African citizen *
+                            </label>
+                            {{ form.citizenship.errors }}
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                {{ form.terms_agreed }} I agree to the terms and conditions and privacy policy *
+                            </label>
+                            {{ form.terms_agreed.errors }}
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary large">Submit Membership Application</button>
+                        <p class="form-note">By submitting this application, you agree to pay the monthly membership fee of R70.</p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Retail Workers Section -->
+    <section class="retail-workers-section">
+        <div class="container">
+            <div class="retail-content">
+                <div class="section-header">
+                    <h2>Why We Include Retail Workers</h2>
+                    <p>Understanding the importance of retail workers in our union</p>
+                </div>
+                <div class="retail-explanation">
+                    <div class="retail-text">
+                        <p>We acknowledge the large workforce in retail and highlight the common challenges retail workers face: low wages, unpredictable schedules, unsafe environments, and unfair dismissals.</p>
+                        <p>Retail workers are as essential as security officers. We currently have members from major retailers like Shoprite and are expanding to include workers from supermarkets, clothing stores, warehouses, and supply chains.</p>
+                        <div class="retail-highlight">
+                            <p>By combining retail and security workers, we multiply our bargaining power for better pay, job security, and dignity for all workers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+{% include 'footer.html' %}
+
+    <script src="{% static 'script/app.js'%}"</script>
+</body>
+</html>

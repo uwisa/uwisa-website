@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership - UWISA</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Our Leadership Team</h1>
+                <p>Meet the dedicated leaders who guide UWISA in our mission to protect and empower security and retail workers across South Africa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Leadership -->
+    <section class="executive-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Executive Leadership</h2>
+                <p>The core executive team providing strategic direction and overall leadership for UWISA.</p>
+            </div>
+            <div class="executive-grid">
+                <div class="leader-card">
+                    <div class="leader-icon president">
+                        <img src="{% static 'image/Misongeya.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Rodgers Misongeya Makhubele</h3>
+                    <div class="leader-title">President</div>
+                    <p>Provides strategic leadership and represents UWISA at the highest level.</p>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-icon deputy">
+                        <img src="{% static 'image/joseph.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Joseph Kakudi</h3>
+                    <div class="leader-title">Deputy President</div>
+                    <p>Supports the president and oversees special projects.</p>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-icon secretary">
+                        <img src="{% static 'image/Vonani.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Vonani Ndhlovu</h3>
+                    <div class="leader-title">Secretary General</div>
+                    <p>Responsible for administration, correspondence, and coordination of union activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Heads -->
+    <section class="departments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Department Heads & Specialists</h2>
+                <p>Experienced professionals leading specialized departments and ensuring comprehensive member support.</p>
+            </div>
+            <div class="departments-grid">
+                <div class="dept-card">
+                    <div class="dept-icon advocate">
+                        <img src="{% static 'image/tiyiselani.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Tiyiselani Mbhiza</h3>
+                    <div class="dept-title">Advocate</div>
+                    <p>A skilled labour law expert dedicated to defending workers' rights and promoting justice.</p>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon chair">
+                        <img src="{% static 'image/jan.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Jan Maluleke</h3>
+                    <div class="dept-title">Chairperson</div>
+                    <p>Leads meetings and ensures decisions are implemented.</p>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon recruitment">
+                        <img src="{% static 'image/.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Rodney Kubayi</h3>
+                    <div class="dept-title">Recruitment & Outreach Officer</div>
+                    <p>Focuses on member recruitment and building community networks.</p>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon treasurer">
+                        <img src="{% static 'image/mbiza.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Israel Mbiza</h3>
+                    <div class="dept-title">Treasurer General</div>
+                    <p>Manages union finances and ensures transparent financial reporting.</p>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon marketing">
+                        <img src="{% static 'image/Zweli.jpeg' %}" alt="Executive Icon" style="width: 100px; height: auto; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Zweli Nyoka</h3>
+                    <div class="dept-title">Head of Marketing</div>
+                    <p>Manages public image and promotional campaigns.</p>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon admin">
+                        <img src="{% static 'image/Ntsako.jpeg' %}" alt="Executive Icon" style="width: 120px; height: 100px; margin-left: 10px;">
+                    </div>
+                    <h3>Cde Ntsako Ndlovu</h3>
+                    <div class="dept-title">Head of Administration & Organizer</div>
+                    <p>Organises events, manages records, and supports members.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Structure -->
+    <section class="org-structure-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Organizational Structure</h2>
+                <p>UWISA's leadership structure ensures comprehensive representation and support for all members.</p>
+            </div>
+            <div class="org-structure">
+                <div class="structure-item">
+                    <div class="structure-icon executive">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Executive Leadership</h3>
+                    <p>Strategic direction and overall union governance</p>
+                </div>
+                <div class="structure-item">
+                    <div class="structure-icon operations">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Operations Team</h3>
+                    <p>Day-to-day operations and member services</p>
+                </div>
+                <div class="structure-item">
+                    <div class="structure-icon legal">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal & Advocacy</h3>
+                    <p>Legal representation and workers' rights advocacy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Leadership -->
+    <section class="contact-leadership-section">
+        <div class="container">
+            <div class="contact-leadership-content">
+                <h2>Connect with Our Leadership</h2>
+                <p>Our leadership team is committed to serving UWISA members and advancing workers' rights. Get in touch to learn more about our initiatives and how we can support you.</p>
+                <div class="leadership-contact-grid">
+                    <div class="leadership-contact-card">
+                        <h3>Head Office</h3>
+                        <p>1 174 Jacob Street<br>Protea North, Johannesburg<br>Gauteng, South Africa</p>
+                    </div>
+                    <div class="leadership-contact-card">
+                        <h3>Contact Information</h3>
+                        <p>Phone: [To be added]<br>Email: [To be added]<br>Website: [To be added]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+{% include 'footer.html' %}
+    <script src="{% static 'script/app.js'%}"></script>
+</body>
+</html>

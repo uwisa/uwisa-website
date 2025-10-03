@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWISA - Union of Workers in Security & Retail Industry</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+    <!-- Home Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your United Voice in <span class="gradient-text">Security & Retail</span></h1>
+                <p>Fighting for fair wages, safe working conditions, and respect for worker dignity. Whether you're guarding the gates or working the tills, we stand together.</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'membership' %}" class="btn-primary large">Join UWISA Today</a>
+                    <a href="{% url 'about' %}" class="btn-outline large">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">R70</div>
+                    <div class="stat-label">Monthly Membership Fee</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Sectors United</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Committed to Your Rights</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who We Are</h2>
+                <p>UWISA is a united voice for workers in the security and retail sectors. We fight for fair wages, safe working conditions, and respect for worker dignity, representing both security guards and retail floor staff.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-item">
+                        <h3>Our Mission</h3>
+                        <p>To protect, empower, and advance the rights of security and retail workers. We ensure fair working conditions, legal representation, and collective bargaining power that reflects the voices of both sectors.</p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Our Vision</h3>
+                        <p>To become a powerful, legally recognized force defending and uplifting all security and retail workers in South Africa. To ensure no worker stands alone against injustice.</p>
+                    </div>
+                </div>
+                <div class="commitment-card">
+                    <blockquote>"Whether you're guarding the gates or working the tills, UWISA is committed to fighting for your rights, your future, and your dignity. Together, we are stronger — and together, we will win."</blockquote>
+                    <cite>— UWISA Commitment</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefits of Membership</h2>
+                <p>Join UWISA and gain access to comprehensive support, legal representation, and a community of workers fighting for better conditions.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Support & Representation</h3>
+                    <p>Full assistance with workplace disputes, unfair dismissals, and CCMA cases for both security and retail workers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collective Bargaining Power</h3>
+                    <p>A united voice for negotiating better pay, fair contracts, and safer workplaces across both sectors.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Job Security Protection</h3>
+                    <p>Campaigns against casualisation and unfair retrenchments to protect your employment rights.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Training & Skills Development</h3>
+                    <p>Workshops, certifications, and capacity-building programs for both security and retail workers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Industry Updates</h3>
+                    <p>Regular news, labour law changes, and sector developments to keep you informed.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Networking & Solidarity</h3>
+                    <p>Connect with workers from different companies facing similar struggles and build a support system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join the Movement?</h2>
+                <p>Become part of a united force fighting for worker rights in the security and retail industries. Your voice matters, and together we are stronger.</p>
+                <div class="cta-buttons">
+                    <a href="{% url 'membership' %}" class="btn-primary large">Apply for Membership</a>
+                    <a href="{% url 'contact' %}" class="btn-outline large white-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+{% include 'footer.html' %}
+
+</body>
+</html>

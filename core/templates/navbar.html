@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWISA - Union of Workers in Security & Retail Industry</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>UWISA</h1>
+                    <p>United Workers Voice</p>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="{% url 'index' %}" class="nav-link active">Home</a>
+                <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                <a href="{% url 'membership' %}" class="nav-link">Membership</a>
+                <a href="{% url 'leadership' %}" class="nav-link">Leadership</a>
+                <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                <a href="{% url 'membership' %}" class="btn-primary">Join Now</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
